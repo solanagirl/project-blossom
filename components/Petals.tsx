@@ -233,6 +233,6 @@ export default function Petals() {
 	  },[])
 	
 	return (
-      <div id="blossom_container" className='w-full h-full absolute'></div>
+      <div id="blossom_container" className='w-full h-screen absolute'></div>
 	)
 }

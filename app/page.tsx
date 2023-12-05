@@ -3,17 +3,18 @@
 import Image from 'next/image'
 import React from 'react';
 import Petals from '@/components/Petals';
-
+import Lotus from '@/components/Lotus';
+import { Canvas } from '@react-three/fiber'
 
 export default function Home() {
   return (
-    <main className="relative z-auto flex flex-col min-h-screen bg-gradient-sky">
+    <main className="relative z-auto flex flex-col min-h-screen bg-gradient-sky" id='root'>
       <Image src='/branch.gif' className='sticky z-auto z-40' width={600} height={400} alt='Cherry Branch'/>
       <Petals />
       <div className='w-full px-16 lg:px-24 py-20 flex flex-col space-y-12'>
         <div>
           <h1 className='text-6xl text-black relative z-50'>Project: Blossom</h1>
-          <div className='w-full lg:w-3/4 h-3/4 relative z-20 border-t-peach border-b-black border-t-4 border-b-2 shadow-white-glow'>
+          <div className='w-full lg:w-3/4 h-3/4 relative z-20 border-black border'>
           </div>
         </div>
         <div className='flex flex-col space-y-16'>
@@ -39,8 +40,68 @@ export default function Home() {
               </a>
             </div>
           </div>
+          <div className='relative z-30 w-full h-full flex flex-row gap-8 border-b-2 border-black'>
+            <h1 className='text-4xl'>Meet Amy</h1>
+          </div>
+          <div className='flex flex-row gap-16 flex-wrap md:flex-nowrap'>
+          <Image src='/VoV1.jpg' className='relative w-full md:w-1/4 h-full border-black border-2' width={600} height={400} alt='Banner image'/>
+          <div className='w-full flex flex-col flex-grow gap-8'>
+            <h1 className='text-4xl'>Amy Qin</h1>
+            <div className='w-full flex flex-row justify-start gap-4 md:justify-between flex-wrap items-center'>
+              <div>
+                <p className='text-base md:text-xl'>Age</p>
+                <p className='text-xl md:text-2xl'>21</p>
+              </div>
+              <div>
+                <p className='text-base md:text-xl'>Birthday</p>
+                <p className='text-xl md:text-2xl'>December 16, 2001</p>
+              </div>
+              <div>
+                <p className='text-base md:text-xl'>Star Sign</p>
+                <p className='text-xl md:text-2xl'>Sagittarius</p>
+              </div>
+              <div>
+                <p className='text-base md:text-xl'>Zodiac</p>
+                <p className='text-xl md:text-2xl'>Snake</p>
+              </div>
+              <div>
+                <p className='text-base md:text-xl'>Nationality</p>
+                <p className='text-xl md:text-2xl'>Chinese-American</p>
+              </div>
+              <div>
+                <p className='text-base md:text-xl'>Major</p>
+                <p className='text-xl md:text-2xl'>Chemical Engineering</p>
+              </div>
+              <div>
+                <p className='text-base md:text-xl'>Occupation</p>
+                <p className='text-xl md:text-2xl'>Solana Evangelist</p>
+              </div>
+              <div>
+                <p className='text-base md:text-xl'>Height</p>
+                <p className='text-xl md:text-2xl'>5&apos;7 | 170cm</p>
+              </div>
+              <div>
+                <p className='text-base md:text-xl'>Bra Size</p>
+                <p className='text-xl md:text-2xl'>AA</p>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
     </main>
   )
 }
+
+/*
+<Canvas style={{height: '100%', width: '100%'}}>
+            <ambientLight intensity={1} />
+            <directionalLight
+              intensity={0.5}
+              castShadow
+              shadow-mapSize-height={512}
+              shadow-mapSize-width={512}
+            />
+              <Lotus />
+            </Canvas>
+*/
